@@ -1,0 +1,11 @@
+rd_cartid,class_name,severity,rd_pct,DV
+T1,single-crack,high,3,10.0
+T2,alligator-crack,high,4,25.0
+T3,single-crack,low,1,1.0
+T3,alligator-crack,low,1,1.0
+T4,single-crack,moderate,5,5.0
+T4,alligator-crack,moderate,10,35.0
+T5,single-crack,high,2,10.0
+T5,alligator-crack,high,2,25.0
+T6,single-crack,low,20,5.0
+T6,alligator-crack,moderate,30,65.0

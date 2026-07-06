@@ -1,0 +1,11 @@
+rd_cartid,class_name,severity,rd_pct,DV,pci,rating,max_cdv,cdv_a,cdv_b,method
+T1,single-crack,high,3,10.0,91.0,Good,9.0,9.0,9.0,A
+T2,alligator-crack,high,4,25.0,75.0,Satisfactory,25.0,25.0,25.0,A
+T3,single-crack,low,1,1.0,98.0,Good,2.0,2.0,2.0,A
+T3,alligator-crack,low,1,1.0,98.0,Good,2.0,2.0,2.0,A
+T4,single-crack,moderate,5,5.0,63.0,Fair,37.0,37.0,37.0,A
+T4,alligator-crack,moderate,10,35.0,63.0,Fair,37.0,37.0,37.0,A
+T5,single-crack,high,2,10.0,73.0,Satisfactory,27.0,27.0,27.0,A
+T5,alligator-crack,high,2,25.0,73.0,Satisfactory,27.0,27.0,27.0,A
+T6,single-crack,low,20,5.0,33.0,Very Poor,67.0,67.0,67.0,A
+T6,alligator-crack,moderate,30,65.0,33.0,Very Poor,67.0,67.0,67.0,A
