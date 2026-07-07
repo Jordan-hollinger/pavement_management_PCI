@@ -1,0 +1,5 @@
+rd_cartid,pci,rating,max_cdv,cdv_a,cdv_b,method
+T1,91.0,Good,9.0,9.0,9.0,A
+T10,41.3,Poor,58.7,58.7,58.7,A
+T5,76.0,Satisfactory,24.0,24.0,24.0,A
+T9,43.0,Poor,57.0,57.0,57.0,A

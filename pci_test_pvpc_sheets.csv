@@ -1,0 +1,9 @@
+Unique_ID,class_name,severity,extent
+T1,single-crack,high,3
+T5,distortion,moderate,1
+T9,alligator-crack,high,1
+T9,distortion,high,1
+T9,single-crack,high,5
+T10,alligator-crack,high,1
+T10,distortion,high,1
+T10,single-crack,high,50

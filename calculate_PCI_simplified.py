@@ -144,11 +144,14 @@ import pandas as pd
 
 _TABLE_DIR = Path(__file__).parent
 
-ALLIGATOR = pd.read_csv(_TABLE_DIR / "distress_alligator_area.csv")
-SINGLE    = pd.read_csv(_TABLE_DIR / "distress_crack_length.csv")
-PATCH     = pd.read_csv(_TABLE_DIR / "distress_patching_area.csv")
-POTHOLE   = pd.read_csv(_TABLE_DIR / "distress_pothole_area.csv")
-CDV_TABLE = pd.read_csv(_TABLE_DIR / "astm_cdv_correction_table.csv")
+ALLIGATOR  = pd.read_csv(_TABLE_DIR / "distress_alligator_area.csv")
+SINGLE     = pd.read_csv(_TABLE_DIR / "distress_crack_length.csv")
+PATCH      = pd.read_csv(_TABLE_DIR / "distress_patching_area.csv")
+POTHOLE    = pd.read_csv(_TABLE_DIR / "distress_pothole_area.csv")
+DISTORTION = pd.read_csv(_TABLE_DIR / "distress_distortion.csv")
+BLOCK_CRACK = pd.read_csv(_TABLE_DIR / "distress_block_cracking.csv")
+RUTTING     = pd.read_csv(_TABLE_DIR / "distress_rutting.csv")
+CDV_TABLE  = pd.read_csv(_TABLE_DIR / "astm_cdv_correction_table.csv")
 
 _CDV_ARRAYS: dict[int, tuple] = {
     q: (
@@ -164,6 +167,9 @@ _CLASS_TABLE: dict[str, pd.DataFrame] = {
     "alligator-crack": ALLIGATOR,
     "patch":           PATCH,
     "pothole":         POTHOLE,
+    "distortion":      DISTORTION,
+    "block-crack":     BLOCK_CRACK,
+    "rutting":         RUTTING,   
 }
 
 _VALID_CLASSES    = list(_CLASS_TABLE.keys())
@@ -633,6 +639,8 @@ def main() -> None:
         parser.error(f"File not found: {in_path}")
 
     out_dir = Path(args.output) if args.output else in_path.parent
+    subdir = input("\nEnter a name for the output subfolder: ").strip()
+    out_dir = out_dir / subdir
     out_dir.mkdir(parents=True, exist_ok=True)
     base = out_dir / in_path.stem
 
