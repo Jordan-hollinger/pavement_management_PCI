@@ -147,10 +147,13 @@ _TABLE_DIR = Path(__file__).parent
 ALLIGATOR  = pd.read_csv(_TABLE_DIR / "distress_alligator_area.csv")
 SINGLE     = pd.read_csv(_TABLE_DIR / "distress_crack_length.csv")
 PATCH      = pd.read_csv(_TABLE_DIR / "distress_patching_area.csv")
-POTHOLE    = pd.read_csv(_TABLE_DIR / "distress_pothole_area.csv")
+POTHOLE    = pd.read_csv(_TABLE_DIR / "distress_potholes.csv")
 DISTORTION = pd.read_csv(_TABLE_DIR / "distress_distortion.csv")
 BLOCK_CRACK = pd.read_csv(_TABLE_DIR / "distress_block_cracking.csv")
 RUTTING     = pd.read_csv(_TABLE_DIR / "distress_rutting.csv")
+SHOVING     = pd.read_csv(_TABLE_DIR / "distress_shoving.csv")
+BLEEDING    = pd.read_csv(_TABLE_DIR / "distress_bleeding.csv")
+WEATHERING     = pd.read_csv(_TABLE_DIR / "distress_weathering.csv")
 CDV_TABLE  = pd.read_csv(_TABLE_DIR / "astm_cdv_correction_table.csv")
 
 _CDV_ARRAYS: dict[int, tuple] = {
@@ -169,7 +172,10 @@ _CLASS_TABLE: dict[str, pd.DataFrame] = {
     "pothole":         POTHOLE,
     "distortion":      DISTORTION,
     "block-crack":     BLOCK_CRACK,
-    "rutting":         RUTTING,   
+    "rutting":         RUTTING,
+    "shoving":         SHOVING,
+    "bleeding":        BLEEDING,
+    "weathering":      WEATHERING,   
 }
 
 _VALID_CLASSES    = list(_CLASS_TABLE.keys())
